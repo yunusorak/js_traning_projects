@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hubballi', cursive;
+}
+
+body {
+    background-color: #ffdd40;
+    color: #333333;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.fixBox {
+    position: relative;
+}
+
+.doubleDot {
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    color: #333333;
+}
+
+@media screen and (max-width: 768px) {
+    .doubleDot {
+        top: 20%;
+    }
+    .second {
+        margin-top: 60px;
+    }
+}
+
+.minuteInput input,
+.secondInput input {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.secondText {
+    font-size: 4rem;
+}
+
+.minuteText {
+    font-size: 4rem;
+}
