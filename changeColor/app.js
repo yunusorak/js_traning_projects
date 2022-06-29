@@ -7,7 +7,7 @@ const blueColor = document.querySelector("#blueColor")
 const greenColor = document.querySelector("#greenColor")
 const rgbSpan = document.querySelector("#rgbSpan")
 const opacityRange = document.querySelector("#opacityRange")
-colors.addEventListener("change", (e) => {
+colors.addEventListener("input", (e) => {
     console.log(e.target.value)
     colorsId.value = e.target.value
     if (colorsTick.checked == true) {
