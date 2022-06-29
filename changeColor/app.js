@@ -18,26 +18,12 @@ colors.addEventListener("input", (e) => {
 colorsTick.addEventListener("change", (e) => {
     body.style.backgroundColor = colors.value
 })
+redColor.addEventListener("change", changeColor)
+blueColor.addEventListener("change", changeColor)
+greenColor.addEventListener("change", changeColor)
+opacityRange.addEventListener("change", changeColor)
 
-redColor.addEventListener("change", (e) => {
-    rgbSpan.textContent = e.target.value + "," + blueColor.value + "," + greenColor.value + "," + opacityRange.value
-    body.style.backgroundColor = `rgba(${e.target.value}, ${blueColor.value}, ${greenColor.value}, ${opacityRange.value})`
-
-})
-
-blueColor.addEventListener("change", (e) => {
-    rgbSpan.textContent = redColor.value + "," + e.target.value + "," + greenColor.value + "," + opacityRange.value
-    body.style.backgroundColor = `rgba(${redColor.value}, ${e.target.value}, ${greenColor.value}, ${opacityRange.value})`
-})
-
-greenColor.addEventListener("change", (e) => {
-    rgbSpan.textContent = redColor.value + "," + blueColor.value + "," + e.target.value + "," + opacityRange.value
-    body.style.backgroundColor = `rgba(${redColor.value}, ${blueColor.value}, ${e.target.value}, ${opacityRange.value})`
-
-})
-
-opacityRange.addEventListener("change", (e) => {
-    rgbSpan.textContent = redColor.value + "," + blueColor.value + "," + redColor.value + "," + e.target.value
-    body.style.backgroundColor = `rgba(${redColor.value}, ${blueColor.value}, ${greenColor.value}, ${e.target.value})`
-
-})
+function changeColor(){
+   rgbSpan.textContent = redColor.value + "," + blueColor.value + "," + greenColor.value + "," + opacityRange.value
+    body.style.backgroundColor = `rgba(${redColor.value}, ${blueColor.value}, ${greenColor.value}, ${opacityRange.value})`
+}
