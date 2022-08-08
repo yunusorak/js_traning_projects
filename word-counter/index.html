@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        * {
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            background-color: #00ad72;
+        }
+        
+        .wrappDiv {
+            display: flex;
+            margin-top: 150px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .count {
+            box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.175);
+            width: 500px;
+            border-radius: 5px;
+            background-color: rgb(20, 255, 174);
+            flex-direction: column;
+            gap: 35px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .words-character {
+            margin-bottom: 50px;
+            display: flex;
+            padding-top: 30px;
+            justify-content: space-around;
+        }
+        
+        .container {
+            background-color: white;
+            height: 270px;
+            padding: 30px;
+            padding-bottom: 10px;
+            box-shadow: 0 30px 50px rgba(238, 236, 243, 0.3);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .text {
+            font-weight: lighter;
+        }
+        
+        .text-area {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            font-size: 1.1rem;
+            color: gray;
+        }
+        
+        .text-area:focus {
+            border: none;
+            outline: none;
+        }
+        
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="wrapper">
+        <div class="wrappDiv">
+            <div class="count">
+
+                <div class="words-character">
+                    <div class="words">
+                        <h3 class="wordsCount">0</h3>
+                        <p class="text">Words</p>
+                    </div>
+
+                    <div class="characters">
+                        <h3 class="charactersCount">0</h3>
+                        <p class="text">Characters</p>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <textarea id="textAreaElement" placeholder="Start Typing here..." class="text-area" rows="10"></textarea>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script>
+        const areaElement = document.getElementById("textAreaElement")
+        const wordsCount = document.querySelector(".wordsCount")
+        const charactersCount = document.querySelector(".charactersCount")
+
+        areaElement.addEventListener("input", getText)
+
+        function getText(e) {
+            charactersCount.textContent = e.target.value.length
+            let text = e.target.value;
+            let space = 0;
+            for (let i = 0; i < text.length; i++) {
+                if (text[i] == " ") {
+                    space++;
+                    wordsCount.textContent = space
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
