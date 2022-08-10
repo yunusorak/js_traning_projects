@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #016443;
+    align-items: center;
+}
+
+.captcha {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #fff;
+    margin-top: 200px;
+    padding: 30px;
+    row-gap: 30px;
+}
+
+.img-reset {
+    display: flex;
+    justify-content: center;
+    column-gap: 4px;
+    align-items: center;
+}
+
+.title-captcha {
+    color: #00AD72;
+}
+
+.img-div {
+    background-image: url('captcha-bg.png');
+    width: 303px;
+    height: 60px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    align-items: center;
+    border: 1px solid rgb(207, 207, 207);
+    font-size: 1.3rem;
+    color: #924747;
+    font-weight: bold;
+    letter-spacing: 22px;
+}
+
+.reset-button {
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    background-color: #00AD72;
+    cursor: pointer;
+    border: none;
+}
+
+.reset-button i {
+    color: white;
+    font-size: 35px;
+    transition: all .3s ease-in-out;
+    transform: rotate(273deg);
+}
+
+.reset-button:hover i {
+    transition: all .3s ease-in-out;
+    transform: rotate(243deg);
+}
+
+.reset-button:hover {
+    background-color: #02865a;
+}
+
+.reset-button:active {
+    background-color: #00AD72;
+}
+
+.check {
+    width: 100%;
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.captcha-form {
+    width: 100%;
+    padding: 17px 10px 17px 17px;
+    border: 1px solid #00AD72;
+    outline: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.captcha-form::placeholder {
+    color: rgb(197, 197, 197);
+    font-weight: lighter;
+}
+
+.captcha-form:focus {
+    outline: none;
+}
+
+.check-button {
+    position: absolute;
+    right: 1%;
+    top: 13%;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    background-color: #00AD72;
+    padding: 7px 19px;
+    font-size: 20px;
+}
+
+.check-button:hover {
+    background-color: #02865a;
+}
+
+.check-button:active {
+    background-color: #00AD72;
+}
+
+.failure {
+    font-size: 1.2rem;
+    display: none;
+    color: red;
+}
+
+.correct {
+    font-size: 1.2rem;
+    display: none;
+    color: #00AD72;
+}
