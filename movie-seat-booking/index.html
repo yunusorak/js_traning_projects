@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Movie Seat Tickets</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+    <main id="main" class="main">
+        <section id="book-tickets" class="book-tickets">
+            <div class="container text-center book-tickets-box">
+                <div class="container text-center book-tickets-box">
+                    <div class="form-group form-flex mb-5">
+                        <label for="sel1">Pick a movie: </label>
+                        <select class="form-control form-w" id="sel1" name="sellist1">
+                            <option value="10">Avengers: Endgame ($10)</option>
+                            <option value="12">Joker ($12)</option>
+                            <option value="8">Toy Story 4 ($8)</option>
+                            <option value="9">The Lion King ($9)</option>
+                        </select>
+                    </div>
+
+                    <div class="info-chair">
+                        <div class="row info-chair-box-row">
+                            <div class="col-md-12 info-chair-box text-center">
+
+                                <div class="col-md-12">
+                                    <ul class="showCase ">
+                                        <li>
+                                            <div class="seat "></div>
+                                            <small>N/A</small>
+                                        </li>
+                                        <li>
+                                            <div class="seat selected "></div>
+                                            <small>Selected</small>
+                                        </li>
+                                        <li>
+                                            <div class="seat occupied "></div>
+                                            <small>Occupied</small></li>
+                                    </ul>
+
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="screen text-center" id="screen"></div>
+
+            <div class="container text-center">
+
+                <div id="chairs" class="mt-5 chairs">
+
+                    <div class="row chairs-box">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+
+                    <div class="row chairs-box">
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+
+
+                    <div class="row chairs-box">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+
+
+                    <div class="row chairs-box">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+
+
+
+                    <div class="row chairs-box">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+
+
+
+                    <div class="row chairs-box">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                    </div>
+
+
+
+                    <div class="row chairs-box">
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+
+
+                </div>
+
+                <div class="infoMessage mt-5">
+                    <p>You have selected <span class="info-chairs">0</span> seats for a price of $<span class="info-price">0</span></p>
+                </div>
+
+            </div>
+
+
+
+        </section>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="script.js "></script>
+
+</body>
+
+</html>
